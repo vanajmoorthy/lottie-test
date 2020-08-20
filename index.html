@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lottie.js"></script>
+    <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <style>
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            background-color: black;
+
+        }
+
+        #container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lottie {
+            width: 500px;
+        }
+    </style>
+
+    <div id="container">
+        <div id="lottie"></div>
+    </div>
+
+    <script>
+
+
+        let animation = lottie.loadAnimation({
+            container: document.getElementById('lottie'), // the dom element that will contain the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'data.json' // the path to the animation json
+        });
+
+        animation.setSpeed(0.7);
+    </script>
+</body>
+
+</html>
